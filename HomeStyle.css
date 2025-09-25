@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #f4f3ed;
+    --gray96: #969696;
+    --width-lg: 1296px;
+
+    --border-4: 4px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Poppin", sans-serif;
+}
+
+header {
+    padding: 40px 0;
+    background: transparent;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    right: 0;
+}
+
+header>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: var(--width-lg);
+    width: 100%;
+
+    margin: 0 auto;
+}
+
+.navlink {
+    display: flex;
+    gap: 40px;
+}
+
+.navlink a {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.hero_section {
+    height: 760px;
+
+    background: var(--background);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero_section>div {
+    display: flex;
+    justify-content: space-between;
+
+    max-width: var(--width-lg);
+    width: 100%;
+}
+
+.hero_section h2 {
+    font-size: 205px;
+}
+
+.hero_section .ctn_reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hero_section .ctn_avatar {
+    display: flex;
+}
+
+.hero_section .avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: black;
+}
+
+.hero_section .reviews {
+    font-size: 20px;
+    max-width: 300px;
+}
+
+.hero_section .ctn_reviews p {
+    font-weight: 600;
+}
+
+.hero_section .reviews span {
+    color: var(--gray96);
+}
+
+.hero_section .ctn_infor {
+    max-width: 300px;
+}
+
+.hero_section .ctn_infor p {
+    margin-bottom: 16px;
+    line-height: 28px;
+}
+
+.btn_black {
+    padding: 20px 34px;
+    font-weight: 600;
+
+    background: #000;
+    color: white;
+
+    border: 1px solid transparent;
+    border-radius: var(--border-4);
+
+    cursor: pointer;
+
+    transition-duration: 300ms;
+}
+
+.btn_black:hover {
+    background: transparent;
+    color: #000;
+    border: 1px solid var(--gray96);
+}
