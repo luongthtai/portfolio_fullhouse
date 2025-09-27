@@ -23,13 +23,13 @@ body {
 
 header {
     padding: 40px 0;
-    background: transparent;
+    background: var(--background);
 
     position: fixed;
     top: 0;
     left: 0;
-
     right: 0;
+    z-index: 100;
 }
 
 header>div {
@@ -54,6 +54,7 @@ header>div {
 }
 
 .hero_section {
+    position: relative;
     height: 760px;
 
     background: var(--background);
@@ -92,6 +93,8 @@ header>div {
     height: 60px;
     border-radius: 100%;
     background-color: black;
+    border: 1px solid green;
+    margin-right: -15px;
 }
 
 .hero_section .reviews {
@@ -114,6 +117,107 @@ header>div {
 .hero_section .ctn_infor p {
     margin-bottom: 16px;
     line-height: 28px;
+}
+
+.hero_section .avatar_hero {
+    position: absolute;
+    bottom: 0;
+
+    width: 400px;
+
+    aspect-ratio: 3/4;
+    object-fit: cover;
+
+    left: 50%;
+    transform: translate(-50%) rotate(10deg);
+
+    border: 2px solid white;
+    border-radius: 20px;
+
+    transition-duration: 300ms;
+}
+
+.hero_section .avatar_hero:hover {
+    transform: translate(-50%);
+}
+
+.about_section {
+    height: calc(100vh - 117px);
+
+    padding: 100px 0;
+
+    background-color: #000;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about_section .worked_list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.about_section h5 {
+    font-family: "Oswald", sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.about_section marquee {
+    word-spacing: 100px;
+    width: var(--width-lg);
+}
+
+.about_section .about_content {
+    width: var(--width-lg);
+    display: flex;
+}
+
+.about_section .about_content h3 {
+    width: 25%;
+    font-size: 22px;
+}
+
+.about_section .about_content>div {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.about_section .about_content>div>p {
+    font-weight: 500;
+}
+
+.about_section .about_content>div>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about_section .about_content .detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.about_section .about_content .detail span {
+    font-weight: 600;
+}
+
+.about_section .about_content .detail span:nth-child(1) {
+    font-size: 50px;
+}
+
+.about_section .about_content>div p {
+    font-size: 30px;
+    line-height: 42px;
 }
 
 .btn_black {
