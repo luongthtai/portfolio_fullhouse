@@ -7,9 +7,12 @@
 :root {
     --background: #f4f3ed;
     --gray96: #969696;
+    --gray77d: #77777d;
     --width-lg: 1296px;
 
     --border-4: 4px;
+
+    --font-oswald: "Oswald", sans-serif;
 }
 
 a {
@@ -163,7 +166,7 @@ header>div {
 }
 
 .about_section h5 {
-    font-family: "Oswald", sans-serif;
+    font-family: var(--font-oswald);
     font-size: 18px;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -218,6 +221,208 @@ header>div {
 .about_section .about_content>div p {
     font-size: 30px;
     line-height: 42px;
+}
+
+.services_section {
+    padding: 100px 0;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: var(--background);
+}
+
+.services_section>div {
+    width: var(--width-lg);
+
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.services_section>div>div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.services_section .service_item:nth-child(1) {
+    grid-column: 1 /span 2;
+}
+
+.services_section .service_item:nth-child(3) {
+    grid-column: 1 /span 1;
+}
+
+.services_section .service_item:nth-child(4) {
+    grid-column: 2 /span 2;
+}
+
+.services_section>div h3 {
+    font-size: 60px;
+    line-height: 70px;
+    text-transform: uppercase;
+
+    font-family: var(--font-oswald);
+}
+
+.services_section .service_item {
+    padding: 60px 40px;
+
+    border-radius: 20px;
+
+    background: #fff;
+
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.services_section .service_item:hover {
+    span {
+        background-color: #000;
+        color: #fff;
+    }
+
+    .icon {
+        transform: rotate(0);
+    }
+}
+
+.services_section .service_item div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+}
+
+.services_section .service_item div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.services_section .service_item h5 {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: var(--font-oswald);
+}
+
+.services_section .service_item p {
+    color: var(--gray77d);
+    line-height: 28px;
+}
+
+.services_section .service_item span {
+    padding: 4px 10px;
+    display: flex;
+    align-items: center;
+
+    border: 1px solid;
+    border-radius: 6px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    color: var(--gray77d);
+
+    transition-duration: 300ms;
+}
+
+.services_section .service_item .icon {
+    width: 30px;
+    height: 30px;
+
+    font-size: 20px;
+
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    transform: rotate(-45deg);
+    transition-duration: 300ms;
+}
+
+.categories_section {
+    background-color: #000;
+    padding: 100px 0;
+}
+
+.categories_section .container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: 24px;
+    column-gap: 30px;
+    padding: 0 15px;
+}
+
+.categories_section .container>div:hover {
+    h6 {
+        opacity: 1;
+        transform: translateY(-2px);
+    }
+}
+
+.categories_section .container>div:nth-child(1) {
+    grid-column: 1 / span 3;
+}
+
+.categories_section .container>div:nth-child(2) {
+    grid-column: 4 / span 3;
+}
+
+.categories_section .container>div:nth-child(3) {
+    grid-column: 1 / span 2;
+}
+
+.categories_section .container>div:nth-child(4) {
+    grid-column: 3 / span 2;
+}
+
+.categories_section .container>div:nth-child(5) {
+    grid-column-end: span 2;
+}
+
+.categories_section .container img {
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+}
+
+.categories_section .container div {
+    position: relative;
+}
+
+.categories_section .container h5 {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+
+    padding: 14px 14px;
+
+    color: #fff;
+    background: #00000033;
+
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+
+    border-radius: 30px;
+}
+
+.categories_section .container h6 {
+    position: absolute;
+    left: 30px;
+    bottom: 24px;
+
+    font-family: var(--font-oswald);
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    color: #fff;
+    opacity: 0;
+
+    transition-duration: 300ms;
 }
 
 .btn_black {
