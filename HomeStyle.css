@@ -359,6 +359,11 @@ header>div {
         opacity: 1;
         transform: translateY(-2px);
     }
+
+    img {
+        transform: scale(1.05);
+        filter: blur(2px);
+    }
 }
 
 .categories_section .container>div:nth-child(1) {
@@ -382,13 +387,19 @@ header>div {
 }
 
 .categories_section .container img {
-    border-radius: 10px;
-    display: block;
     width: 100%;
+
+    display: block;
+
+    transition-duration: 300ms;
 }
 
 .categories_section .container div {
     position: relative;
+    overflow: hidden;
+
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 .categories_section .container h5 {
@@ -425,6 +436,279 @@ header>div {
     transition-duration: 300ms;
 }
 
+.testinomials_section {
+    padding: 100px 0;
+    background-color: var(--background);
+
+    display: flex;
+    justify-content: center;
+}
+
+.testinomials_section>div {
+    width: var(--width-lg);
+
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.testinomials_section>div h3 {
+    font-size: 60px;
+    line-height: 70px;
+    text-transform: uppercase;
+
+    font-family: var(--font-oswald);
+}
+
+.testinomials_section .container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
+}
+
+.testinomials_section .testinomial_items {
+    display: flex;
+    flex-direction: column;
+
+    background: #fff;
+
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid transparent;
+
+    transition-duration: 300ms;
+}
+
+.testinomials_section .testinomial_items:nth-child(1) {
+    grid-column: 1/ span 3;
+}
+
+.testinomials_section .testinomial_items:nth-child(2) {
+    grid-column: 4/ span 3;
+}
+
+.testinomials_section .testinomial_items:nth-child(3) {
+    grid-column: 1/ span 2;
+}
+
+.testinomials_section .testinomial_items:nth-child(4) {
+    grid-column: 3/ span 2;
+}
+
+.testinomials_section .testinomial_items:nth-child(5) {
+    grid-column: 5/ span 2;
+}
+
+.testinomials_section .testinomial_items:hover {
+    border-color: #000;
+}
+
+.testinomials_section>div .image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #000;
+    margin-bottom: 25px;
+}
+
+.testinomials_section>div p {
+    margin-bottom: 30px;
+    color: var(--gray77d);
+    line-height: 30px;
+}
+
+.testinomials_section>div h5 {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+
+    font-family: var(--font-oswald);
+}
+
+.testinomials_section>div span {
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--gray77d);
+}
+
+.stories_section {
+    padding: 100px 0;
+
+    display: flex;
+    justify-content: center;
+
+    background: #000;
+    color: #fff;
+}
+
+.stories_section>div {
+    width: var(--width-lg);
+
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.stories_section .container {
+    display: grid;
+    gap: 60px;
+}
+
+.stories_section>div h3 {
+    font-size: 60px;
+    line-height: 70px;
+    text-transform: uppercase;
+
+    font-family: var(--font-oswald);
+}
+
+.stories_section .store_item {
+    padding: 40px 35px;
+    border: 1px solid #242424;
+
+    display: flex;
+    align-items: center;
+    gap: 90px;
+}
+
+.stories_section .store_item div:nth-child(1) {
+    position: relative;
+
+    width: 55%;
+    aspect-ratio: 16/9;
+
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.stories_section .store_item div:nth-child(1):hover {
+    img {
+        transform: scale(1.05);
+        filter: blur(2px);
+    }
+}
+
+.stories_section .store_item div:nth-child(2) {
+    width: 45%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.stories_section .store_item div:nth-child(2) p {
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.stories_section .store_item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition-duration: 300ms;
+}
+
+.stories_section .store_item h4 {
+    font-size: 40px;
+    letter-spacing: -.3;
+
+    text-transform: uppercase;
+    font-family: var(--font-oswald);
+}
+
+.stories_section .store_item div:nth-child(1) p {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    font-size: 12px;
+    text-transform: uppercase;
+
+    color: #f4f3ed;
+    background: #00000033;
+
+    padding: 14px;
+    border-radius: 30px;
+}
+
+.contact_section {
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+
+    background: var(--background);
+}
+
+.contact_section>div {
+    width: var(--width-lg);
+
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.contact_section>div h3 {
+    font-size: 60px;
+    line-height: 70px;
+    text-transform: uppercase;
+
+    font-family: var(--font-oswald);
+}
+
+.contact_section .container {
+    display: flex;
+    gap: 30px;
+}
+
+.contact_section .container .left_box {
+    width: 35%;
+    padding: 50px 30px 20px 40px;
+
+    background: #fff;
+
+    border-radius: 10px;
+}
+
+.contact_section .container form {
+    width: 65%;
+    padding: 50px 30px 20px 40px;
+
+    background: #fff;
+
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.contact_section .container form label {
+    margin-bottom: 18px;
+    text-transform: uppercase;
+
+    display: block;
+}
+
+.contact_section .container form .ctn_input {
+    display: flex;
+    gap: 20px;
+
+    width: 100%;
+    padding: 19px 20px;
+
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.contact_section .container form input {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
 .btn_black {
     padding: 20px 34px;
     font-weight: 600;
@@ -438,6 +722,27 @@ header>div {
     cursor: pointer;
 
     transition-duration: 300ms;
+}
+
+.btn_white {
+    padding: 20px 34px;
+    font-weight: 600;
+
+    background: #fff;
+    color: #000;
+
+    border: 1px solid transparent;
+    border-radius: var(--border-4);
+
+    cursor: pointer;
+
+    transition-duration: 300ms;
+}
+
+.btn_white:hover {
+    background: transparent;
+    color: #fff;
+    border: 1px solid var(--gray96);
 }
 
 .btn_black:hover {
