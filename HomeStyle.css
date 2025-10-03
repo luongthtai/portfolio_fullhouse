@@ -21,7 +21,7 @@ a {
 }
 
 body {
-    font-family: "Poppin", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 header {
@@ -33,6 +33,10 @@ header {
     left: 0;
     right: 0;
     z-index: 100;
+
+    @media (max-width: 425px) {
+        padding: 15px;
+    }
 }
 
 header>div {
@@ -49,11 +53,24 @@ header>div {
 .navlink {
     display: flex;
     gap: 40px;
+
+    @media (max-width: 425px) {
+        display: none;
+    }
 }
 
 .navlink a {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 15px;
+}
+
+header>div>button {
+    display: none;
+    border: none;
+
+    @media (max-width: 425px) {
+        display: block;
+    }
 }
 
 .hero_section {
@@ -67,6 +84,12 @@ header>div {
     justify-content: center;
     align-items: center;
     gap: 50px;
+
+    @media (max-width: 425px) {
+        padding: 78px 20px 10px;
+        height: auto;
+        gap: 20px;
+    }
 }
 
 .hero_section>div {
@@ -75,16 +98,30 @@ header>div {
 
     max-width: var(--width-lg);
     width: 100%;
+
+    @media (max-width: 425px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
 }
 
 .hero_section h2 {
     font-size: 205px;
+
+    @media (max-width: 425px) {
+        font-size: 70px;
+    }
 }
 
 .hero_section .ctn_reviews {
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @media (max-width: 425px) {
+        align-items: center;
+    }
 }
 
 .hero_section .ctn_avatar {
@@ -115,6 +152,10 @@ header>div {
 
 .hero_section .ctn_infor {
     max-width: 300px;
+
+    @media (max-width: 425px) {
+        text-align: center;
+    }
 }
 
 .hero_section .ctn_infor p {
@@ -138,11 +179,18 @@ header>div {
     border-radius: 20px;
 
     transition-duration: 300ms;
+
+    @media (max-width: 425px) {
+        position: static;
+        transform: none;
+    }
 }
 
 .hero_section .avatar_hero:hover {
     transform: translate(-50%);
 }
+
+/* About section */
 
 .about_section {
     height: calc(100vh - 117px);
@@ -156,6 +204,13 @@ header>div {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 425px) {
+        padding: 100px 15px;
+        gap: 100px;
+
+        height: auto;
+    }
 }
 
 .about_section .worked_list {
@@ -174,17 +229,26 @@ header>div {
 
 .about_section marquee {
     word-spacing: 100px;
-    width: var(--width-lg);
+    max-width: var(--width-lg);
 }
 
 .about_section .about_content {
-    width: var(--width-lg);
+    max-width: var(--width-lg);
     display: flex;
+
+    @media (max-width: 425px) {
+        flex-direction: column;
+        gap: 30px;
+    }
 }
 
 .about_section .about_content h3 {
     width: 25%;
     font-size: 22px;
+
+    @media (max-width: 425px) {
+        width: 100%;
+    }
 }
 
 .about_section .about_content>div {
@@ -192,6 +256,10 @@ header>div {
     display: flex;
     flex-direction: column;
     gap: 60px;
+
+    @media (max-width: 425px) {
+        width: 100%;
+    }
 }
 
 .about_section .about_content>div>p {
@@ -208,6 +276,8 @@ header>div {
     flex-direction: column;
     align-items: center;
     gap: 8px;
+
+    text-align: center;
 }
 
 .about_section .about_content .detail span {
@@ -216,12 +286,31 @@ header>div {
 
 .about_section .about_content .detail span:nth-child(1) {
     font-size: 50px;
+
+    @media (max-width: 425px) {
+        font-size: 30px;
+    }
+}
+
+.about_section .about_content .detail span:nth-child(2) {
+    font-size: 16px;
+
+    @media (max-width: 425px) {
+        font-size: 14px;
+    }
 }
 
 .about_section .about_content>div p {
     font-size: 30px;
     line-height: 42px;
+
+    @media (max-width: 425px) {
+        font-size: 24px;
+        line-height: 34px;
+    }
 }
+
+/* Services section */
 
 .services_section {
     padding: 100px 0;
@@ -230,10 +319,14 @@ header>div {
     justify-content: center;
 
     background-color: var(--background);
+
+    @media (max-width: 425px) {
+        padding: 100px 15px;
+    }
 }
 
 .services_section>div {
-    width: var(--width-lg);
+    max-width: var(--width-lg);
 
     display: flex;
     flex-direction: column;
@@ -244,6 +337,10 @@ header>div {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+
+    @media (max-width: 425px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .services_section .service_item:nth-child(1) {
@@ -276,6 +373,11 @@ header>div {
     display: flex;
     flex-direction: column;
     gap: 60px;
+
+    @media (max-width: 425px) {
+        grid-column: auto !important;
+        padding: 60px 25px;
+    }
 }
 
 .services_section .service_item:hover {
@@ -341,9 +443,15 @@ header>div {
     transition-duration: 300ms;
 }
 
+/* categories section */
+
 .categories_section {
     background-color: #000;
     padding: 100px 0;
+
+    @media (max-width: 425px) {
+        padding: 50px 15px;
+    }
 }
 
 .categories_section .container {
@@ -351,7 +459,16 @@ header>div {
     grid-template-columns: repeat(6, 1fr);
     row-gap: 24px;
     column-gap: 30px;
-    padding: 0 15px;
+
+    @media (max-width: 425px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.categories_section .container>div {
+    @media (max-width: 425px) {
+        grid-column: auto !important;
+    }
 }
 
 .categories_section .container>div:hover {
@@ -436,16 +553,22 @@ header>div {
     transition-duration: 300ms;
 }
 
+/* testinomial section */
+
 .testinomials_section {
     padding: 100px 0;
     background-color: var(--background);
 
     display: flex;
     justify-content: center;
+
+    @media (max-width: 425px) {
+        padding: 100px 15px;
+    }
 }
 
 .testinomials_section>div {
-    width: var(--width-lg);
+    max-width: var(--width-lg);
 
     display: flex;
     flex-direction: column;
@@ -464,6 +587,10 @@ header>div {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 30px;
+
+    @media (max-width: 425px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .testinomials_section .testinomial_items {
@@ -477,6 +604,10 @@ header>div {
     border: 1px solid transparent;
 
     transition-duration: 300ms;
+
+    @media (max-width: 425px) {
+        grid-column: auto !important;
+    }
 }
 
 .testinomials_section .testinomial_items:nth-child(1) {
@@ -542,7 +673,7 @@ header>div {
 }
 
 .stories_section>div {
-    width: var(--width-lg);
+    max-width: var(--width-lg);
 
     display: flex;
     flex-direction: column;
@@ -644,7 +775,7 @@ header>div {
 }
 
 .contact_section>div {
-    width: var(--width-lg);
+    max-width: var(--width-lg);
 
     display: flex;
     flex-direction: column;
@@ -682,7 +813,12 @@ header>div {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    align-items: start;
     gap: 35px;
+}
+
+.contact_section .container form>div {
+    width: 100%;
 }
 
 .contact_section .container form label {
@@ -707,6 +843,68 @@ header>div {
     border: none;
     outline: none;
     width: 100%;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+.contact_section .container form textarea {
+    font-family: "Poppin", sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+
+    resize: vertical;
+    outline: none;
+}
+
+.contact_section .container form textarea input::placeholder {
+    color: var(--gray96);
+}
+
+.contact_section .container .form_name {
+    display: flex;
+    gap: 30px;
+}
+
+.contact_section .container .form_name>div {
+    width: 100%;
+}
+
+footer {
+    background-color: var(--background);
+    padding: 100px 0;
+    text-align: center;
+
+    position: relative;
+}
+
+footer p {
+    font-size: 20px;
+}
+
+footer a {
+    font-size: 180px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @media (max-width: 425px) {
+        font-size: 120px;
+    }
+}
+
+footer>div {
+    max-width: var(--width-lg);
+
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    justify-content: space-between;
+}
+
+footer>div p {
+    font-size: 12px;
 }
 
 .btn_black {
